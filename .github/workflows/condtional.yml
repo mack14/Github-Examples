@@ -1,0 +1,15 @@
+name: Condtional
+on: [push]
+jobs:
+    hello-word:
+        if: github.repository == 'octo-org/octo-repo-prod'
+        runs-on : ubuntu-latest
+        steps:
+            - name: "Hello World"
+              run: echo "Hello World!"
+    goobye-moon:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Goodbye Moon"
+              run: echo "Goodbye Moon!"
+    
